@@ -1,0 +1,38 @@
+{
+  "key": "jokipedia",
+  "name": "Jokipedia",
+  "description": "Jokipedia",
+  "vendor": {
+    "name": "Shenbo Xuan",
+    "url": "https://www.hipchat.com"
+  },
+  "links": {
+    "self": "{{localBaseUrl}}/atlassian-connect.json",
+    "homepage": "{{localBaseUrl}}"
+  },
+  "capabilities": {
+    "hipchatApiConsumer": {
+      "scopes": [
+        "send_notification",
+        "view_room"
+      ],
+      "avatar": {
+        "url": "{{localBaseUrl}}/img/avatar.jpg",
+        "url@2x": "{{localBaseUrl}}/img/avatar.jpg"
+      }
+    },
+    "installable": {
+      "callbackUrl": "{{localBaseUrl}}/installable"
+    },
+    "configurable": {
+      "url": "{{localBaseUrl}}/config"
+    },
+    "webhook": {
+      "url": "{{localBaseUrl}}/webhook",
+      "pattern": "^/joki",
+      "event": "room_message",
+      "name": "Jokipedia",
+      "authentication": "jwt"
+    }
+  }
+}
